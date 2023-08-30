@@ -1,7 +1,7 @@
 from tkinter import *
 
 # ---------------------------- PASSWORD GENERATOR ------------------------------- #
-
+# Hi this is Andrew from puppyous grooming.
 # ---------------------------- SAVE PASSWORD ------------------------------- #
 
 # ---------------------------- UI SETUP ------------------------------- #
