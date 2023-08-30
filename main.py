@@ -1,5 +1,5 @@
 from tkinter import *
-
+from tkinter import messagebox
 # ---------------------------- PASSWORD GENERATOR ------------------------------- #
 # Hi this is Andrew from puppyous grooming.
 # ---------------------------- SAVE PASSWORD ------------------------------- #
@@ -7,10 +7,15 @@ def save():
    website = website_entry.get()
    email=email_entry.get()
    password = password_entry.get()
-   with open("data.txt","a") as data_file:
-       data_file.write(f"{website}   {email}  {password}\n")
-       website_entry.delete(0, END)
-       password_entry.delete(0, END)
+   if len(website)==0 or len(password)==0:
+       messagebox.showinfo(message="Please enter information")
+   else:
+       messagebox.askokcancel(title=website,message=f"These are the details: {email}")
+
+       with open("data.txt","a") as data_file:
+           data_file.write(f"{website}   {email}  {password}\n")
+           website_entry.delete(0, END)
+           password_entry.delete(0, END)
 
 
 
